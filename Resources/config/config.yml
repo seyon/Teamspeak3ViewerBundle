@@ -1,0 +1,7 @@
+seyon_teamspeak3_viewer:
+    user: xxx
+    pass: xxx
+    host: xxx
+    query: 10011
+    voice: 8987
+    template: "SeyonTeamspeak3ViewerBundle::layout.html.twig"

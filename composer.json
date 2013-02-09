@@ -10,7 +10,7 @@
         "seyon/teamspeak3-framework": "dev-master"
     },
     "autoload": {
-        "psr-0": { "Seyon\\Teamspeak\\ViewerBundle": "" }
+        "psr-0": { "Seyon\\Teamspeak3\\ViewerBundle": "" }
     },
-    "target-dir": "Seyon/Teamspeak/ViewerBundle"
+    "target-dir": "Seyon/Teamspeak3/ViewerBundle"
 }
