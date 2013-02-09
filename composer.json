@@ -1,0 +1,16 @@
+{
+    "name": "seyon/teamspeak3-viewer-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony Bundle for TS3 Viewer",
+    "keywords": ["ts3","teamspeak", "Symfony"],
+    "homepage": "https://github.com/seyon/Teamspeak3Bundle",
+    "license": "GNU",
+    "require": {
+        "php": ">=5.3",
+        "seyon/teamspeak3-framework": "dev-master"
+    },
+    "autoload": {
+        "psr-0": { "Seyon\\Teamspeak\\ViewerBundle": "" }
+    },
+    "target-dir": "Seyon/Teamspeak/ViewerBundle"
+}
