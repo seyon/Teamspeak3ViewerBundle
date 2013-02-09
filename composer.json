@@ -7,7 +7,7 @@
     "license": "GNU",
     "require": {
         "php": ">=5.3",
-        "seyon/teamspeak3-framework": "dev-master"
+        "seyon/teamspeak3-framework": "*@dev"
     },
     "autoload": {
         "psr-0": { "Seyon\\Teamspeak3\\ViewerBundle": "" }
