@@ -4,4 +4,6 @@ seyon_teamspeak3_viewer:
     host: xxx
     query: 10011
     voice: 8987
+    max_age: 120
+    shared_max_age: 120
     template: "SeyonTeamspeak3ViewerBundle::layout.html.twig"

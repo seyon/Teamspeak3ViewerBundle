@@ -20,7 +20,8 @@ class ViewController extends Controller
         $root = $this->container->getParameter('kernel.root_dir');
 
         /* load framework library */
-        require_once($root."/../vendor/seyon/teamspeak3-framework/Seyon/Teamspeak3/Framework/libraries/TeamSpeak3/TeamSpeak3.php");
+        $frameworkRoot = $root."/../vendor/seyon/teamspeak3-framework/Seyon/Teamspeak3/Framework/";
+        require_once($frameworkRoot."libraries/TeamSpeak3/TeamSpeak3.php");
  
         $html = '';
 		
@@ -36,7 +37,7 @@ class ViewController extends Controller
 			$ts3->setLoadClientlistFirst(TRUE); 
 
 			/* display viewer for selected TeamSpeak3_Node_Server */
-			$viewer = new \TeamSpeak3_Viewer_Html("/bundles/cmstemplate/finalfantasy/images/teamspeak/", "/bundles/cmstemplate/finalfantasy/images/flags/", "/bundles/cmstemplate/finalfantasy/images/teamspeak/ts3icon.php");
+			$viewer = new \TeamSpeak3_Viewer_Html($frameworkRoot."images/viewer/", $frameworkRoot."images/flags/", $frameworkRoot."examples/ts3icon.php");
 			$html .= $ts3->getViewer($viewer);
 			/* display runtime from adapter profiler */
 			//$sHtml .= "<p>Executed " . $ts3->getAdapter()->getQueryCount() . " queries in " . $ts3->getAdapter()->getQueryRuntime() . " seconds</p>\n";
@@ -52,8 +53,8 @@ class ViewController extends Controller
             'seyon_teamspeak3_viewer' => $this->container->getParameter('seyon_teamspeak3_viewer')
 		));
 		
-		$response->setMaxAge(120);
-		$response->setSharedMaxAge(120);
+		$response->setMaxAge($cfg['max_age']);
+		$response->setSharedMaxAge($cfg['shared_max_age']);
 		
         return $response;
 
