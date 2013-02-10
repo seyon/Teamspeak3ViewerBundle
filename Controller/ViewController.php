@@ -37,8 +37,9 @@ class ViewController extends Controller
 			$ts3->setLoadClientlistFirst(TRUE); 
 
 			/* display viewer for selected TeamSpeak3_Node_Server */
-			$viewer = new \TeamSpeak3_Viewer_Html($frameworkRoot."images/viewer/", $frameworkRoot."images/flags/", $frameworkRoot."examples/ts3icon.php");
+			$viewer = new \TeamSpeak3_Viewer_Html("/bundles/seyonteamspeak3viewer/images/viewer/", "/bundles/seyonteamspeak3viewer/images/flags/", $frameworkRoot."examples/ts3icon.php");
 			$html .= $ts3->getViewer($viewer);
+
 			/* display runtime from adapter profiler */
 			//$sHtml .= "<p>Executed " . $ts3->getAdapter()->getQueryCount() . " queries in " . $ts3->getAdapter()->getQueryRuntime() . " seconds</p>\n";
 		}
@@ -47,7 +48,7 @@ class ViewController extends Controller
 			/* echo error message */
 			$html .= "<p><span class=\"error\"><b>ERROR 0x" . dechex($e->getCode()) . "</b>: " . htmlspecialchars($e->getMessage()) . "</span></p>";
 		}
-		
+
 		$response = $this->render('SeyonTeamspeak3ViewerBundle:View:overview.html.twig', array(
 			'ts3_overview'         => $html,
             'seyon_teamspeak3_viewer' => $this->container->getParameter('seyon_teamspeak3_viewer')
