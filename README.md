@@ -3,6 +3,12 @@ TS3Viewer
 
 Bundle to implement TS3 Viewer into SF2
 
+# Install via composer
+
+```json
+"seyon/teamspeak3-viewer-bundle": "v1.0.0"
+```
+
 # Usage
 
 add this into your twig Template
