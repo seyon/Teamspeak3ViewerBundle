@@ -8,7 +8,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.3",
-        "seyon/teamspeak3-framework": "1.0.*@dev"
+        "seyon/teamspeak3-framework": "1.0"
     },
     "autoload": {
         "psr-0": { "Seyon\\Teamspeak3\\ViewerBundle": "" }
