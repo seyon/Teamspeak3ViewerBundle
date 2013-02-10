@@ -27,7 +27,7 @@ class Configuration implements ConfigurationInterface
                     ->isRequired()
                 ->end()
                 ->scalarNode('voice') 
-                    ->defaultValue('8987')
+                    ->defaultValue('9987')
                     ->isRequired()
                 ->end()
                 ->scalarNode('max_age') 
