@@ -5,7 +5,6 @@
     "keywords": ["ts3","teamspeak", "Symfony"],
     "homepage": "https://github.com/seyon/Teamspeak3Bundle",
     "license": "GNU",
-    "minimum-stability": "dev",
     "require": {
         "php": ">=5.3",
         "seyon/teamspeak3-framework": "dev-master"
