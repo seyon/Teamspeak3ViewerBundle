@@ -16,20 +16,18 @@ class ViewController extends Controller
      */
     public function overviewAction()
     {
+        
+        $root = $this->container->getParameter('kernel.root_dir');
 
         /* load framework library */
-        require_once("/../../Framework/libraries/TeamSpeak3/TeamSpeak3.php");
-
+        require_once($root."/../vendor/seyon/teamspeak3-framework/Seyon/Teamspeak3/Framework/libraries/TeamSpeak3/TeamSpeak3.php");
+ 
         $html = '';
 		
 		try
 		{
-			$cfg = array();
-			$cfg['user'] = 'seyon';
-			$cfg['pass'] = 'NBt1h4vT';
-			$cfg['host'] = 'ts.finalfantasy-14.de';
-			$cfg['query'] = '10011';
-			$cfg["voice"] = '8987';
+            
+            $cfg = $this->container->getParameter('seyon_teamspeak3_viewer');
 
 			/* connect to server, authenticate and get TeamSpeak3_Node_Server object by URI */
 			$ts3 = \TeamSpeak3::factory("serverquery://" . $cfg["user"] . ":" . $cfg["pass"] . "@" . $cfg["host"] . ":" . $cfg["query"] . "/?server_port=" . $cfg["voice"] . "#no_query_clients");
@@ -51,6 +49,7 @@ class ViewController extends Controller
 		
 		$response = $this->render('SeyonTeamspeak3ViewerBundle:View:overview.html.twig', array(
 			'ts3_overview'         => $html,
+            'seyon_teamspeak3_viewer' => $this->container->getParameter('seyon_teamspeak3_viewer')
 		));
 		
 		$response->setMaxAge(120);
