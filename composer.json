@@ -5,9 +5,10 @@
     "keywords": ["ts3","teamspeak", "Symfony"],
     "homepage": "https://github.com/seyon/Teamspeak3Bundle",
     "license": "GNU",
+    "minimum-stability": "dev",
     "require": {
         "php": ">=5.3",
-        "seyon/teamspeak3-framework": "1.0"
+        "seyon/teamspeak3-framework": "dev-master"
     },
     "autoload": {
         "psr-0": { "Seyon\\Teamspeak3\\ViewerBundle": "" }
