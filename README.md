@@ -9,7 +9,7 @@ Bundle to implement TS3 Viewer into SF2
 "seyon/teamspeak3-viewer-bundle": "v1.0.0"
 ```
 
-# Usage
+# Usage (normal)
 
 add this into your twig Template
 
@@ -22,6 +22,31 @@ add this into your twig Template
 # config
 
 ```yaml
+seyon_teamspeak3_viewer:
+    user: xxxx
+    pass: yyyy
+    host: your.server.ts
+    query: 10011
+    voice: 9987
+```
+
+
+
+# Usage (hinclude.js)
+
+```twig
+...
+{{ render_hinclude(controller('SeyonTeamspeak3ViewerBundle:View:overview')) }}
+...
+```
+
+# config
+
+```yaml
+framework:
+    ....
+    fragments: { path: /_fragment }
+
 seyon_teamspeak3_viewer:
     user: xxxx
     pass: yyyy
