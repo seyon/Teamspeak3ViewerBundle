@@ -13,13 +13,15 @@ Bundle to implement TS3 Viewer into SF2
 
 add this into your twig Template
 
+#template
+
 ```twig
 ...
 {{ render(controller('SeyonTeamspeak3ViewerBundle:View:overview')) }}
 ...
 ```
 
-# config
+## config
 
 ```yaml
 seyon_teamspeak3_viewer:
@@ -34,13 +36,15 @@ seyon_teamspeak3_viewer:
 
 # Usage (hinclude.js)
 
+## template
+
 ```twig
 ...
 {{ render_hinclude(controller('SeyonTeamspeak3ViewerBundle:View:overview')) }}
 ...
 ```
 
-# config
+## config
 
 ```yaml
 framework:
