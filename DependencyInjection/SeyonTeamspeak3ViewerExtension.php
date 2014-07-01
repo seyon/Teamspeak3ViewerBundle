@@ -1,4 +1,4 @@
-<?
+<?php
 namespace Seyon\Teamspeak3\ViewerBundle\DependencyInjection;
 
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
